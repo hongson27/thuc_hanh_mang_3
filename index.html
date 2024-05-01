@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let count=0;
+    let newArray = [];
+    let input = +prompt('Nhap so vao day:');
+    for (let i = 0; i < Math.floor(Math.random() * 15) + 5; i++) {
+        newArray.push(Math.floor(Math.random() * 20));
+    }
+    document.write(newArray);
+    for (let i = 0; i < newArray.length; i++) {
+        if (input == newArray[i]) {
+            document.write('<br>' + newArray[i] + ' la phan tu trong mang va o vi tri ' + i);
+            count = 1;
+        }
+    }
+        if (count == 0) {
+    document.write('<br>' + input +' khong la phan tu trong mang' );
+        }
+</script>
+</body>
+</html>
